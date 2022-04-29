@@ -1,10 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View, ImageBackground, Pressable } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {StyleSheet, Text, View, ImageBackground, Pressable } from 'react-native';
 
 const image = require('../assets/imageBackgroundWelcome.png')
-
 
 export default function Welcome({ navigation }) {
   return (
@@ -25,8 +22,6 @@ export default function Welcome({ navigation }) {
             <Text  style={styles.textButtonUserRegistred}>Já tenho conta</Text>
           </Pressable>
          </View>
-      
-        
         <StatusBar style="auto" />
        </ImageBackground>
     </View>
@@ -75,8 +70,7 @@ const styles = StyleSheet.create({
   textButtonNewUser:{
     color: '#fff',
     fontWeight:'700',
-    fontSize:18,
-    fontFamily:'Quicksand'
+    fontSize:18
   },
   buttonUserRegistred: {
     alignItems: 'center',
@@ -88,7 +82,6 @@ const styles = StyleSheet.create({
   textButtonUserRegistred:{
     color: '#5F93FB',
     fontWeight:'700',
-    fontSize:18,
-    fontFamily:'Quicksand'
+    fontSize:18
   }
 });
