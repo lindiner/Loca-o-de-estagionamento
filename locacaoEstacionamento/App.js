@@ -6,6 +6,9 @@ import Welcome from './telas/Welcome';
 import Home from './telas/Home';
 import Login from './telas/Login';
 import Cadastro from './telas/Cadastro';
+import Map from './telas/Map';
+import Record from './telas/Record';
+import Profile from './telas/Profile';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +20,9 @@ function App() {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Cadastro" component={Cadastro} />
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Map" component={Map} />
+        <Stack.Screen name="Record" component={Record} />
+        <Stack.Screen name="Profile" component={Profile} />
       </Stack.Navigator>
     </NavigationContainer>
   );
