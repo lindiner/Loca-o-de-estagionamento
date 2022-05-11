@@ -11,8 +11,9 @@ export default function Welcome({ navigation }) {
          <View style={styles.contentCenter}>
           <Text style={styles.welcomeTitle}>Bem vindo</Text>
           <Text style={styles.textWelcome}>
-            Bem-vindo ao Design Diário, 
-            o maior portal para se informar sobre design
+            Parking onde você encontra os melhores
+            lugares para estacionar
+            o seu veiculo.
           </Text>   
 
           <Pressable style={styles.buttonNewUser} onPress={() => navigation.navigate('Cadastro')}>

@@ -1,7 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, ScrollView } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
+
+import ParkinkMenu from '../components/ParkingMenu';
+import SectionPage from '../components/SectionPage';
+import ParkingDetails from '../components/ParkingDetails';
 
 export default function Home( {navigation} ) {
   return (
@@ -18,12 +21,34 @@ export default function Home( {navigation} ) {
         <Text style={styles.message}>Encontre o melhor lugar para estacionar</Text>
         
         <View style={styles.itemDivisor}></View>
+        
         <View style={styles.mainContent}>
          <View style={styles.inputContent}>
             <Image style={styles.inputImage} source={require('../assets/searchIcon.png')}/>
             <TextInput style={styles.input} placeholder="Pesquisar "/>
           </View>
+
+          <ParkinkMenu/>
+          <SectionPage/>
+
+          <ScrollView>
+            <ParkingDetails
+              image={require('../assets/parkShow.png')}
+              parkingName="Shopping Patio Marabá"
+              adress="TransAmazonica 26, Nova"
+              valueHour="10"
+            />
+
+            <ParkingDetails
+              image={require('../assets/verdesMares.png')}
+              parkingName="Shopping Verdes Mares"
+              adress="Nagibe Mutran 24, Nova"
+              valueHour="15"
+            />
+          </ScrollView>
+          
         </View>
+
         <View style={styles.footer}>
           <Feather name="home" size={30} marginLeft={25} color={"#B0B0B0"} onPress={() => navigation.navigate('Home')} ></Feather>
           <Ionicons name="map-outline" size={30} marginLeft={25} color={"#B0B0B0"} onPress={() => navigation.navigate('Map')} ></Ionicons>
@@ -43,10 +68,13 @@ const styles = StyleSheet.create({
   },
   itemDivisor:{
     flex: 0.15,
+  },
+  scrollViewElement:{
+
   },  
   mainContent:{
     backgroundColor:"#EFEFEF",
-    flex: 3,
+    flex: 4,
     borderTopLeftRadius:50,
     borderTopRightRadius:50,
   },
@@ -116,6 +144,7 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 5,
     fontSize: 15,
+    flex: 1
   },
   inputImage:{
     width: 12,
