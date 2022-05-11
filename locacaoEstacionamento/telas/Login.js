@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
     height: 40,
     marginBottom: 12,
     borderWidth: 0,
-    padding: 12,
+    padding: 16,
     paddingLeft:0,
     fontWeight:'400',
     fontSize:16
