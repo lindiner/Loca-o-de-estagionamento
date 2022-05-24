@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import {StyleSheet, Text, View, ImageBackground, Pressable } from 'react-native';
 
-const image = require('../assets/imageBackgroundWelcome.png')
+const image = require('../assets/imageBackgroundWelcome.png');
 
 export default function Welcome({ navigation }) {
   return (

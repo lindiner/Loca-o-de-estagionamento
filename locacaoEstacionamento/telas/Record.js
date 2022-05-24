@@ -1,16 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, Text, View } from 'react-native';
+import { Button, ImageBackground ,StyleSheet, Text, View } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather';
+
+const image = require('../assets/alocacoes.jpg');
 
 export default function Record({ navigation }) {
   return (
     <View style={styles.container}>
-      <Text>Volte para a Tela Inicial</Text>
-      <Button
-        title="Página Inicial"
-        onPress={() => navigation.navigate('Home')}
-      />
+       <ImageBackground source={image} resizeMode='cover' style={styles.image}>
+        <Text style={styles.texto}></Text>
+       </ImageBackground>
       <StatusBar style="auto" />
         <View style={styles.footer}>
           <Feather name="home" size={30} marginLeft={25} color={"#B0B0B0"} onPress={() => navigation.navigate('Home')} ></Feather>
@@ -28,6 +28,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  image:{
+    flex: 1,
+    justifyContent:'center',
+  },
+  texto:{
+    padding:20,
+    paddingLeft: 200,
+    paddingRight: 200,
   },
   footer:{
     display: 'flex',
