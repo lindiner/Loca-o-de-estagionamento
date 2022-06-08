@@ -17,7 +17,7 @@ export default function Home( {navigation} ) {
               <Image style={styles.imageBellIcon}  source={require('../assets/bellIcon.png')}/>
             </View>
         </View>
-        <Text style={styles.welcomeProfileName}>Bom dia Chris</Text>
+        <Text style={styles.welcomeProfileName}>Olá, Chris!</Text>
         <Text style={styles.message}>Encontre o melhor lugar para estacionar</Text>
         
         <View style={styles.itemDivisor}></View>
