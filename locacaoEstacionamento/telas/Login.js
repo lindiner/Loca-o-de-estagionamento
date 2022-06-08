@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   input: {
-    height: 40,
+    height: 60,
     marginBottom: 12,
     borderWidth: 0,
     padding: 16,
